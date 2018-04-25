@@ -1,7 +1,3 @@
-/* 
-BUG:怎么处理流
-*/
-
 #include <stdio.h>
 #include <string.h>
 #define maxr 10
@@ -17,9 +13,8 @@ int main() {
 	int first;
 
 	kase = 1;
-	while(scanf("%d", &r) == 1 && r) {
-		scanf("%d", &c);
-		getchar();
+	while(scanf("%d%d", &r, &c) == 2 && r) {
+		getchar();		//key point.因为后面要读char，所以滤过空格
 		printf("puzzle #%d:\n", kase++);
 		for(int i = 0; i < r; i++) 
 			for(int j = 0; j < c; j++) {
@@ -76,7 +71,8 @@ int main() {
 				printf("%c", s[i][j]);
 			}
 		}
-
-		return 0;
+		printf("\n");
 	}
+
+	return 0;
 }
