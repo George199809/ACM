@@ -4,6 +4,7 @@
 #define maxn 100	
 const char *ans[4] = {"is not a palindrome.", "is a regular polidrome.", "is a mirrored string.", "is a mirrored palindrome."};
 //字符串常量是const char*
+//因为除了第一维，其余维度数组的长度必须固定
 char reverse[] = "A   3  HIL JM O   2TUVWXY51SE Z  8 ";
 char mirror(char ch) {
 	return reverse[ch-'A'];
